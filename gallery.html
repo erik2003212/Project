@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+    header { background-color: #333; color: white; padding: 20px 0; text-align: center; }
+    nav { display: flex; justify-content: center; background-color: #444; padding: 10px 0; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #ffcc00; }
+    nav a.active { color: #ffcc00; text-decoration: underline; }
+    .container { max-width: 1200px; margin: 20px auto; padding: 20px; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .image-container { display: flex; justify-content: space-between; flex-wrap: wrap; }
+    .image-container img { width: 30%; margin-bottom: 20px; border-radius: 8px; }
+    footer { text-align: center; background-color: #333; color: white; padding: 10px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Галерея</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="destinations.html">Направления</a>
+    <a href="gallery.html" class="active">Галерея</a>
+    <a href="blog.html">Блог</a>
+    <a href="contact.html">Контакты</a>
+  </nav>
+
+  <div class="container">
+    <h2>Фото из разных уголков мира</h2>
+    <div class="image-container">
+      <img src="https://via.placeholder.com/300" alt="Фото 1">
+      <img src="https://via.placeholder.com/300" alt="Фото 2">
+      <img src="https://via.placeholder.com/300" alt="Фото 3">
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Путешествия по миру</p>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
